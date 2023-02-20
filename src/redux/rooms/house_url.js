@@ -1,3 +1,3 @@
-const houseUrl = 'https://vacayhome-api.herokuapp.com/api/v1/houses';
+const houseUrl = 'https://vacayhome-api.fly.dev/api/v1/houses';
 
 export default houseUrl;

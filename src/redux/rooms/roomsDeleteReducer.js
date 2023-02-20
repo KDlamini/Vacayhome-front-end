@@ -13,7 +13,7 @@ const deleteRoomsReducer = (state = initialState, action) => {
 };
 
 export const deleteRoom = (id) => async (dispatch) => {
-  await axios.delete(`https://vacayhome-api.herokuapp.com/api/v1/houses/${id}`)
+  await axios.delete(`https://vacayhome-api.fly.dev/api/v1/houses/${id}`)
     .then((response) => {
       dispatch({ type: DELETE_ROOM, payload: response });
     });

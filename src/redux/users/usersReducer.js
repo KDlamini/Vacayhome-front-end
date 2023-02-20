@@ -16,14 +16,14 @@ const usersReducer = (state = initialState, action) => {
 };
 
 export const fetchUsers = () => (dispatch) => {
-  axios.get('https://vacayhome-api.herokuapp.com/api/v1/users')
+  axios.get('https://vacayhome-api.fly.dev/api/v1/users')
     .then((response) => {
       dispatch({ type: FETCH_USERS, payload: response.data });
     });
 };
 
 export const postUsers = (data) => (dispatch) => {
-  axios.post('https://vacayhome-api.herokuapp.com/api/v1/users', data)
+  axios.post('https://vacayhome-api.fly.dev/api/v1/users', data)
     .then((response) => {
       dispatch({ type: POST_USERS, payload: response });
     });
