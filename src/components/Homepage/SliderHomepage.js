@@ -70,7 +70,23 @@ function Slider({ isLoggedIn }) {
                   />
 
                   <div className="carousel-description">
-                    <span>3 guests&nbsp; 1 bedroom&nbsp; 2 beds&nbsp; 1 bath</span>
+                    <span>
+                      {house.guests}
+                      {' '}
+                      guests&nbsp;
+                      {' '}
+                      {house.bedrooms}
+                      {' '}
+                      bedrooms&nbsp;
+                      {' '}
+                      {house.beds}
+                      {' '}
+                      beds&nbsp;
+                      {' '}
+                      {house.bath}
+                      {' '}
+                      baths
+                    </span>
                     <p>
                       <strong>{house.name}</strong>
                       {' '}
