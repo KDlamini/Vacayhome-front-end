@@ -14,6 +14,10 @@ function AddHouseForm() {
   const [propertyType, setPropertyType] = useState('');
   const [address, setAddress] = useState('');
   const [imageUrl, setImage] = useState('');
+  const [guests, setGuests] = useState(0);
+  const [bedrooms, setBedrooms] = useState(0);
+  const [beds, setBeds] = useState(0);
+  const [bath, setBaths] = useState(0);
 
   const dispatch = useDispatch();
 
@@ -24,6 +28,10 @@ function AddHouseForm() {
       name,
       price,
       description,
+      guests,
+      bedrooms,
+      beds,
+      bath,
       country: Country.getCountryByCode(country).name,
       city,
       address,
@@ -65,18 +73,28 @@ function AddHouseForm() {
           type="number"
           placeholder="Guests allowed"
           className="rounded"
+          onChange={(e) => setGuests(e.target.value)}
           required
         />
         <Form.Control
           type="number"
           placeholder="Bedrooms"
           className="mx-2 rounded"
+          onChange={(e) => setBedrooms(e.target.value)}
           required
         />
         <Form.Control
           type="number"
           placeholder="Beds"
           className="rounded"
+          onChange={(e) => setBeds(e.target.value)}
+          required
+        />
+        <Form.Control
+          type="number"
+          placeholder="baths"
+          className="ms-2 rounded"
+          onChange={(e) => setBaths(e.target.value)}
           required
         />
       </InputGroup>
