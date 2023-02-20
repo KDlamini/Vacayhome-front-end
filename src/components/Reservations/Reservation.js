@@ -77,11 +77,11 @@ const Reservation = () => {
            parseInt(houseId, 10) === 0 && (
            <select
              onChange={(e) => setRoomId(e.target.value)}
-             align="end"
              style={{
                outline: 'none',
                width: '95%',
                borderRadius: '2px',
+               align: 'end',
              }}
              placeholder="Choose a House you want to reserve."
              id="dropdown-menu-align-end"

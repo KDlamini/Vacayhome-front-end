@@ -46,7 +46,7 @@ const Detail = ({ house, isLoggedIn }) => {
                 </div>
                 <div>
                   <Link to={paths.reservation}>
-                    <button variant="success" className="btn-success theme-btn mt-4 rounded" size="lg" type="button">Reserve</button>
+                    <button className="btn-success theme-btn mt-4 rounded" size="lg" type="button">Reserve</button>
                   </Link>
                 </div>
                 <div>

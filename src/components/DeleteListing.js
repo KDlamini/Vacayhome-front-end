@@ -61,12 +61,12 @@ function RemoveHouse() {
         <h1>Remove a House from our Listing</h1>
 
         <select
-          align="end"
           style={{
             outline: 'none',
             width: '95%',
             borderRadius: '2px',
             margin: '2rem 0',
+            align: 'end',
           }}
           onChange={(e) => setRoomId(e.target.value)}
           placeholder="Choose a House you want to reserve."

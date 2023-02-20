@@ -10,7 +10,7 @@ const SingleReservation = ({ reservation, rooms }) => (
         room.id === reservation.house_id
         && (
 
-        <div className="d-flex">
+        <div key={room.id} className="d-flex">
           <div>
             <img alt="room" src={`${room.image_url}`} style={{ width: '200px', margin: '1rem 0' }} />
           </div>
