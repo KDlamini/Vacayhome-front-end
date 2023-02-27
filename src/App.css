@@ -208,6 +208,12 @@ p {
   box-shadow: none;
 }
 
+#dropdown-menu-align-end {
+  margin: auto 10px;
+  width: auto;
+  min-width: 200px;
+}
+
 .reservations-buttons .react-datepicker-wrapper {
   width: 200px !important;
   display: flex !important;
@@ -224,6 +230,7 @@ p {
 .react-datepicker-wrapper input {
   color: #97bf02;
   border: none;
+  padding: 0;
 }
 
 .book-btn:hover,
