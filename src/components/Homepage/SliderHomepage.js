@@ -11,12 +11,12 @@ function Slider({ isLoggedIn }) {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
       items: 3,
-      slidesToSlide: 3, // optional, default to 1.
+      slidesToSlide: 1, // optional, default to 1.
     },
     tablet: {
       breakpoint: { max: 1024, min: 454 },
       items: 2,
-      slidesToSlide: 2, // optional, default to 1.
+      slidesToSlide: 1, // optional, default to 1.
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
@@ -24,6 +24,7 @@ function Slider({ isLoggedIn }) {
       slidesToSlide: 1, // optional, default to 1.
     },
   };
+
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchRooms());
@@ -47,9 +48,9 @@ function Slider({ isLoggedIn }) {
             draggable={false}
             responsive={responsive}
             infinite
-            autoPlaySpeed={8000}
+            autoPlaySpeed={2000}
             keyBoardControl
-            customTransition="all .5"
+            customTransition="all 1"
             transitionDuration={500}
             containerClass="carousel-container"
             dotListClass="custom-dot-list-style"
