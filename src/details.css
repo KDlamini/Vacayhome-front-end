@@ -17,6 +17,8 @@
 
 .description {
   text-transform: none;
+  margin-left: 15px;
+  font-size: 15px;
 }
 
 .description:nth-child(odd) {
