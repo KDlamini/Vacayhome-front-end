@@ -50,7 +50,7 @@ const Detail = ({ house, isLoggedIn }) => {
                   </Link>
                 </div>
                 <div>
-                  <a href={`/${userId}`}>
+                  <a href={isLoggedIn ? `/${userId}` : '/'}>
                     <BiArrowBack className="mt-4" />
                   </a>
                 </div>
