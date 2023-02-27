@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Detail from '../Details';
+import shortenDescription from '../utils/shortenDescription';
 import { fetchRooms } from '../../redux/rooms/rooms';
 
 function Slider({ isLoggedIn }) {
@@ -66,31 +67,32 @@ function Slider({ isLoggedIn }) {
                 >
                   <img
                     src={house.image_url}
+                    className="carousel-img"
                     alt="travel vacation"
                   />
 
                   <div className="carousel-description">
-                    <span>
+                    <span className="house-details">
                       {house.guests}
                       {' '}
-                      guests&nbsp;
+                      Guests&nbsp;
                       {' '}
                       {house.bedrooms}
                       {' '}
-                      bedrooms&nbsp;
+                      Bedrooms&nbsp;
                       {' '}
                       {house.beds}
                       {' '}
-                      beds&nbsp;
+                      Beds&nbsp;
                       {' '}
                       {house.bath}
                       {' '}
-                      baths
+                      Baths
                     </span>
                     <p>
                       <strong>{house.name}</strong>
                       {' '}
-                      {house.description}
+                      <span className="house-description">{shortenDescription(house.description)}</span>
                     </p>
                   </div>
                 </div>
